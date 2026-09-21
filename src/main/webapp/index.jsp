@@ -1024,7 +1024,7 @@
                 <span class="logo-icon">
                     <i class="fa-solid fa-bag-shopping"></i>
                 </span>
-                NexusShop
+                TarunShop
             </a>
 
             <nav class="nav" id="mobileMenu">
