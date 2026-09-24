@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <title>IKEA</title>
+    <title>TarunShop</title>
 
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -15,31 +15,31 @@
 
     <style>
         :root {
-            --primary: #111827;
-            --secondary: #6366f1;
-            --accent: #f97316;
-            --success: #16a34a;
+            --primary: #1f2937;
+            --secondary: #1f4f8f;
+            --accent: #c89b3c;
+            --success: #2f6b4f;
 
-            --bg: #f8fafc;
+            --bg: #f7f5f0;
             --surface: #ffffff;
-            --surface-soft: #f1f5f9;
+            --surface-soft: #f1eee7;
 
-            --text: #111827;
-            --text-light: #64748b;
-            --border: #e2e8f0;
+            --text: #202124;
+            --text-light: #6b6b67;
+            --border: #dedbd3;
 
             --shadow-sm:
-                0 2px 8px rgba(15, 23, 42, 0.06);
+                0 2px 8px rgba(31, 41, 55, 0.06);
 
             --shadow-md:
-                0 10px 30px rgba(15, 23, 42, 0.08);
+                0 12px 28px rgba(31, 41, 55, 0.10);
 
             --shadow-lg:
-                0 20px 50px rgba(15, 23, 42, 0.12);
+                0 22px 48px rgba(31, 41, 55, 0.13);
 
-            --radius-sm: 10px;
-            --radius-md: 16px;
-            --radius-lg: 24px;
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
 
             --container: 1200px;
         }
@@ -1008,6 +1008,282 @@
                 flex-direction: column;
             }
         }
+    
+/* ===== Classic UI refinement ===== */
+body {
+    font-family: "Inter", sans-serif;
+    background: #f7f5f0;
+    color: #202124;
+}
+
+.header {
+    background: rgba(255,255,255,.98);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #d8d5cd;
+}
+
+.header-inner { min-height: 72px; }
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    letter-spacing: -.4px;
+}
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 6px;
+    background: #1f4f8f;
+    box-shadow: none;
+}
+
+.nav { gap: 24px; }
+
+.nav a {
+    color: #4b4b47;
+    font-size: 13px;
+    letter-spacing: .15px;
+}
+
+.nav a:hover { color: #1f4f8f; }
+
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 7px;
+    background: #fff;
+    border-color: #d8d5cd;
+}
+
+.icon-btn:hover {
+    color: #1f4f8f;
+    border-color: #aebdce;
+    background: #f5f7fa;
+}
+
+.cart-count {
+    background: #c89b3c;
+    top: -4px;
+    right: -4px;
+}
+
+.search-wrapper input {
+    height: 42px;
+    border-radius: 7px;
+    background: #f8f7f3;
+    border-color: #d8d5cd;
+}
+
+.search-wrapper input:focus {
+    border-color: #8ca4bd;
+    box-shadow: 0 0 0 3px rgba(31,79,143,.10);
+}
+
+.search-wrapper button {
+    border-radius: 6px;
+    background: #1f4f8f;
+}
+
+.hero {
+    padding: 72px 0;
+    background:
+        linear-gradient(90deg, #f7f5f0 0%, #f7f5f0 58%, #eeeae1 100%);
+}
+
+.hero-grid { gap: 55px; }
+
+.hero-badge {
+    padding: 7px 11px;
+    border-radius: 5px;
+    background: #e8edf3;
+    color: #1f4f8f;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    color: #202124;
+    letter-spacing: -1.5px;
+}
+
+.hero p {
+    color: #666660;
+    font-size: 16px;
+}
+
+.btn {
+    min-height: 46px;
+    border-radius: 6px;
+    padding: 0 20px;
+}
+
+.btn-primary {
+    background: #1f4f8f;
+    box-shadow: none;
+}
+
+.btn-primary:hover {
+    background: #173d6d;
+    transform: translateY(-1px);
+    box-shadow: 0 7px 18px rgba(31,79,143,.18);
+}
+
+.btn-secondary {
+    background: #fff;
+    border-color: #cbc7bd;
+}
+
+.btn-secondary:hover {
+    border-color: #1f4f8f;
+    color: #1f4f8f;
+}
+
+.hero-image {
+    min-height: 420px;
+    border-radius: 12px;
+    background: #e9e5dc;
+    box-shadow: 0 16px 35px rgba(31,41,55,.12);
+}
+
+.hero-image img { min-height: 420px; }
+
+.benefits {
+    padding: 22px 0;
+    background: #fff;
+    border-bottom: 1px solid #ddd9d0;
+}
+
+.benefit-card {
+    padding: 14px;
+    border-radius: 8px;
+    background: #faf9f6;
+    border-color: #e1ded6;
+}
+
+.benefit-icon {
+    border-radius: 7px;
+    background: #edf1f5;
+    color: #1f4f8f;
+}
+
+section { padding: 72px 0; }
+
+.section-heading h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+}
+
+.section-heading p { color: #70706a; }
+
+.section-link { color: #1f4f8f; }
+
+.category-grid { gap: 16px; }
+
+.category-card {
+    min-height: 210px;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+.category-card img { min-height: 210px; }
+
+.category-overlay {
+    padding: 22px 18px;
+    background: linear-gradient(transparent, rgba(20,25,30,.78));
+}
+
+.product-grid { gap: 18px; }
+
+.product-card {
+    border-radius: 10px;
+    border-color: #ddd9d0;
+    box-shadow: none;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(31,41,55,.10);
+}
+
+.product-image { background: #f2f0eb; }
+
+.wishlist-btn {
+    border-radius: 7px;
+    box-shadow: 0 2px 8px rgba(31,41,55,.08);
+}
+
+.product-content { padding: 17px; }
+
+.product-category {
+    color: #1f4f8f;
+    letter-spacing: .8px;
+}
+
+.product-title { font-weight: 700; }
+
+.product-price { color: #202124; }
+
+.add-cart {
+    border-radius: 7px;
+    background: #1f4f8f;
+}
+
+.add-cart:hover { background: #173d6d; }
+
+.deal { padding: 64px 0; }
+
+.deal-box {
+    padding: 50px;
+    border-radius: 12px;
+    background: #263746;
+}
+
+.deal-label { border-radius: 5px; }
+
+.timer-item {
+    border-radius: 7px;
+    background: rgba(255,255,255,.11);
+}
+
+.testimonial {
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+.newsletter-box {
+    padding: 48px;
+    border-radius: 12px;
+    background: #ece8de;
+}
+
+.newsletter-box h2 {
+    font-family: "Playfair Display", serif;
+}
+
+.newsletter-form input { border-radius: 7px; }
+
+footer {
+    background: #202a33;
+}
+
+footer .logo-icon { background: #1f4f8f; }
+
+@media (max-width: 760px) {
+    .header-inner { min-height: 66px; }
+    .nav { top: 66px; }
+    .hero { padding: 50px 0; }
+    .hero-image, .hero-image img { min-height: 300px; }
+    section { padding: 55px 0; }
+}
+
+@media (max-width: 520px) {
+    .hero h1 { font-size: 40px; }
+    .newsletter-box { padding: 32px 22px; }
+}
+
     </style>
 </head>
 
@@ -1110,7 +1386,7 @@
                             class="btn btn-primary"
                             id="shopNow"
                         >
-                            Start Shopping
+                            Shop Collection
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
 
@@ -1118,7 +1394,7 @@
                             class="btn btn-secondary"
                             id="exploreDeals"
                         >
-                            See Today's Deals
+                            View Today's Deals
                         </button>
 
                     </div>
@@ -1299,7 +1575,7 @@
                 <div class="section-header">
 
                     <div class="section-heading">
-                        <h2>Popular Products</h2>
+                        <h2>Featured Collection</h2>
 
                         <p>
                             Discover products customers are loving right now.
@@ -1397,11 +1673,11 @@
                 <div class="section-header">
 
                     <div class="section-heading">
-                        <h2>What Customers Say</h2>
+                        <h2>Customer Reviews</h2>
 
                         <p>
                             Real experiences from people shopping with
-                            NexusShop.
+                            TarunShop.
                         </p>
                     </div>
 
@@ -1617,7 +1893,7 @@
             <div class="footer-bottom">
 
                 <span>
-                    © 2026 NexusShop. All rights reserved.
+                    © 2026 TarunShop. All rights reserved.
                 </span>
 
                 <span>
